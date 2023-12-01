@@ -1,0 +1,22 @@
+Functional Components:
+Nothing but js functions. They are independent, and they will not have any knowledge on
+what is going to happen in other component.
+
+Syntax:
+function MyFunction() {
+return (
+    <h1>Hii</h1>
+);
+}
+
+
+Class Component:
+Class component are complex by nanture. Class components can work with each other.
+
+Syntax:
+
+class MyClassComponent extends React.Component {
+     render() {
+        return <h1>Hello you!!</h1>
+     }
+}
