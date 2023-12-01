@@ -1,0 +1,29 @@
+import React from "react";
+import ReactDOM form "react-dom/client";
+
+class Parent extends React.Component {
+  render() {
+    return(
+      <h1>I am inside Parent</h1> 
+      <Child name="Harish" age="58" />
+    );
+  }
+}
+
+class Child extends React.Component {
+  render() {
+    return(
+      <h1>I am inside Child component</h1>
+      <h1>I am {this.props.user}</h1>
+      <h1>My age is {this.props.age}</h1>
+    );
+  }
+}
+
+
+const root = ReactDOM.CreateRoot(document.getElementById("root"));
+root.render(
+  <React.StrictMode>
+  <Parent />
+  </React.StrictMode>
+);
