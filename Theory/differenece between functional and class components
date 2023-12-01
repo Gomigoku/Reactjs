@@ -1,0 +1,20 @@
+Functional Component:
+1. It is pure js function that accepts props as an argument and
+returns JSX element.
+2. It runs from top to bottom, once a funtional component has returned
+it can't be kept alive.
+3. These are known as stateless components, as they simply accept some data
+and displays them in UI.
+4. React life cycle methods cannot be used in here.
+5. Constructors are not used.
+
+Class Component:
+1. It extends from React.Component and returns from
+render function, render function is a must for class component.
+2. The class component is instatiated and different life cycle
+method is kept alive and invoked depending on the phase.
+3. They are also known as stateful components as they implement logic and state.
+4. React life cycle methods can be used in class components.
+5. Constructors are used.
+
+
