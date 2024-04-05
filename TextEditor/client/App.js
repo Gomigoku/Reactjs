@@ -1,11 +1,27 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
-import './styles.css';
+import TextEditor from "./TextEditor";
+import {
+  BrowserRouter,
+  Switch,
+  Route,
+  Redirect
+} from 'react-router-dom';
+import {v4 as uuidV4} from 'uuid';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+function App() {
+  return (
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" exact>
+          <Redirect to={`/documents/${uuidV4()}`} />
+        </Route>
+        <Route path="/documents/:id">
+          <TextEditor />
+        </Route>
+      </Switch> 
+    </BrowserRouter>
+    
+  );
+}
+
+export default App;
+
