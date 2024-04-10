@@ -36,8 +36,11 @@ const OtpIput = ({length = 4, onOtpSubmit = () => {}}) => {
 
     }
     console.log(inputRefs);
-    const handleClick = () => {
-
+    const handleClick = (index) => {
+        inputRefs.current[index].setSelectionRange(1,1);
+        if(index > 0 && !otp[index-1]){
+          inputRefs.current[otp.index[""]].focus();
+        }
     }
     const handleKeyDown = (index, e) => {
          if(e.key === "Backspace" && !otp[index] && index>0 && inputRefs.current[index-1]){
